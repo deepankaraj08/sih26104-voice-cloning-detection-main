@@ -1,0 +1,116 @@
+# =========================
+# Environment / Secrets
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# =========================
+# Node / Next.js
+# =========================
+node_modules/
+.next/
+out/
+.turbo/
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =========================
+# IDE / OS
+# =========================
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# =========================
+# Runtime / uploads
+# =========================
+uploads/
+storage/
+*.log
+
+# =========================
+# ML datasets & audio files
+# =========================
+ml_data/**/*.wav
+ml_data/**/*.mp3
+ml_data/**/*.ogg
+ml_data/**/*.flac
+ml_data/**/*.m4a
+ml_data/**/*.aac
+ml_data/**/*.webm
+data/
+
+# Keep dataset directory structure and manifest files
+!ml_data/**/
+!ml_data/**/.gitkeep
+!ml_data/*.json
+!ml_data/**/*.json
+
+# =========================
+# ML model artifacts & feature caches
+# =========================
+/models/
+*.joblib
+*.pkl
+*.pickle
+*.onnx
+*.pt
+*.pth
+*.npz
+ml_cache/
+.cache/
+ml_eval/**/results/*.csv
+
+# =========================
+# Database / local runtime
+# =========================
+*.db
+*.sqlite
+*.sqlite3
+
+# =========================
+# Build / temporary files
+# =========================
+dist/
+build/
+tmp/
+temp/
+.cache/
+
+# Raw research datasets & experiments - local only
+/datasets/
+/experiments/
+
+# Physical-domain research data — keep local
+ml_data/physical_domain/
+ml_data/physical_domain_pool/
+ml_data/quarantined_attempts/
+ml_data/simulated_channel_benchmark/
+
+# Microphone evaluation generated artifacts
+ml_eval/microphone/scratch/
+ml_eval/microphone/results/
+ml_eval/microphone/__pycache__/
